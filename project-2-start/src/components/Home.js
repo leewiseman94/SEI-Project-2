@@ -7,7 +7,7 @@ const Home = () => {
     <section className="hero is-fullheight is-warning">
       <div className="hero-body">
         <div className="container">
-          <h1 className="title has-text-white">
+          <h1 className="title is-1 has-text-white">
             Football Teams
           </h1>
           <h2 className="subtitle has-text-white">

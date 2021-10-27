@@ -13,11 +13,15 @@
   background-position: center;
 }
 
-.title {
+.title.is-1 {
   font-size: 60px;
+}
+
+h4 {
+  margin: 0 !important;
 }
 
 .overlay {
   background-color: RGBA(0, 0, 0, 0.5);
-  padding: 9rem 4.5rem;
+  padding: 4.5rem 4.5rem;
 }
