@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+* {
+  font-family: 'Architects Daughter', cursive;
+}
+
+.hero-body {
+  background: url('../images/HomeBackground.jpeg');
+  padding: 0 !important;
+}
+
+.title-section {
+  background-position: center;
+}
+
+.title {
+  font-size: 60px;
+}
+
+.overlay {
+  background-color: RGBA(0, 0, 0, 0.5);
+  padding: 9rem 4.5rem;
+}
