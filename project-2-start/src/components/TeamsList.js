@@ -9,7 +9,6 @@ const TeamsList = ({ leagues, teams }) => {
   const [noneAvailable, setNoneAvailable] = useState(false)
   const [league, setLeague] = useState('all')
   const [search, setSearch] = useState('')
-  const [sort, setSort] = useState('')
 
   useEffect(() => {
     try {
@@ -27,7 +26,7 @@ const TeamsList = ({ leagues, teams }) => {
       filterTeams()
     }
     
-  }, [search, sort, league])
+  }, [search, league])
 
   function filterTeams() {
     const regexSearch = new RegExp(search, 'i') // The i modifier is used to perform case-insensitive matching
@@ -69,7 +68,7 @@ const TeamsList = ({ leagues, teams }) => {
             </div>
             <div className="column is-half-desktop is-full-mobile has-text-right-desktop has-text-left-desktop">
               <h4 className="title is-3 mgb-2">Search</h4>
-              <input className="input" onChange={handleInput}></input>
+              <input className="input" placeholder="arsenal" onChange={handleInput}></input>
             </div>
           </div>
           
@@ -90,7 +89,7 @@ const TeamsList = ({ leagues, teams }) => {
             </>
             :
             <div className="has-text-centered"> 
-              <h2 className="title is-5">
+              <h2 className="title is-5 has-text-centered">
                 {hasError ? 'Something has gone wrong' : noneAvailable ? 'Check spelling' : 'Loading...'}
               </h2>
               

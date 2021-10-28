@@ -43,15 +43,15 @@ const TeamDetails = () => {
       <section className="hero is-medium is-warning">
         <div className="hero-body title-section pb-6">
           <div className="overlay">
-            <div className="columns is-align-items-center">
+            <div className="columns is-align-items-center has-text-centered">
               <div className="column is-one-fifth">
                 <img className="team-badge" src={team.strTeamBadge}></img>
               </div>
               <div className="column is-four-fifth">
-                <h1 className="title is-1 has-text-white has-text-left">
+                <h1 className="title is-1 has-text-white has-text-left has-text-centered-mobile">
                   {team.strTeam}
                 </h1>
-                <h5 className="title is-5 has-text-white has-text-left">
+                <h5 className="title is-5 has-text-white has-text-left has-text-centered-mobile">
                   {detailsReady && team.strKeywords.split(',')[0]}
                 </h5>
               </div>

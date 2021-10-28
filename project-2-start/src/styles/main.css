@@ -34,7 +34,25 @@ h4 {
 .football-teams {
   padding: 4.5rem;
 }
-
+/* 
 .team-badge {
   padding: 35px;
+} */
+
+img {
+  height: 200px;
+}
+
+.social-media {
+  height: auto;
+  width: 40px;
+  margin: 5px;
+}
+
+.stadium {
+  margin: 30px 0;
+}
+
+.main-section {
+  padding: 1rem 4.5rem;
 }
