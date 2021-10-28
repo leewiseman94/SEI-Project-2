@@ -72,18 +72,22 @@ const TeamsList = ({ leagues, teams }) => {
               <input className="input" onChange={handleInput}></input>
             </div>
           </div>
+          
         </div>
       </section>
       <section className="section">
         <div className="container">
           {filteredTeams.length ? 
-            <div className="columns is-multiline">
-              {filteredTeams.map(team => {
-                return (
-                  <TeamCard key={team.idTeam} team={team} />
-                )
-              })}
-            </div>
+            <>
+              <h5 className="title is-6">Showing {filteredTeams.length} of {teams.length}</h5>
+              <div className="columns is-multiline">
+                {filteredTeams.map(team => {
+                  return (
+                    <TeamCard key={team.idTeam} team={team} />
+                  )
+                })}
+              </div>
+            </>
             :
             <div className="has-text-centered"> 
               <h2 className="title is-5">

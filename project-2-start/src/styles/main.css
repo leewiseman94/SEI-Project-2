@@ -17,11 +17,24 @@
   font-size: 60px;
 }
 
+.column.is-four-fifth {
+  padding: 3rem 0;
+}
+
+
 h4 {
   margin: 0 !important;
 }
 
 .overlay {
   background-color: RGBA(0, 0, 0, 0.5);
-  padding: 4.5rem 4.5rem;
+  padding: 1rem 4.5rem;
+}
+
+.football-teams {
+  padding: 4.5rem;
+}
+
+.team-badge {
+  padding: 35px;
 }

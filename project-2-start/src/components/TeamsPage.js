@@ -54,7 +54,7 @@ const TeamsPage = () => {
       <section className="hero is-medium is-warning">
         <div className="hero-body title-section pb-6">
           <div className="overlay">
-            <h1 className="title is-1 has-text-white has-text-centered">
+            <h1 className="title is-1 has-text-white has-text-centered football-teams">
               Football Teams
             </h1> 
           </div>
