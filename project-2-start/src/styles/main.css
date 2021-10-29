@@ -56,3 +56,18 @@ img {
 .main-section {
   padding: 1rem 4.5rem;
 }
+
+/* .card-hover {
+  margin: 10px;
+} */
+.card-hover:hover {
+  /* display: inline-block;
+  margin: 0 0.5rem; */
+  animation-delay: 0;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.7s; /* don't forget to set a duration! */
+}
+
+.description {
+  white-space: pre-line;
+}

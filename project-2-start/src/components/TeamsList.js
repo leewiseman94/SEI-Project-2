@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TeamCard from './TeamCard'
+import LoadingImage from '../images/loading-image.gif'
 
 const TeamsList = ({ leagues, teams }) => {
 
@@ -54,11 +55,11 @@ const TeamsList = ({ leagues, teams }) => {
 
   return (
     <>
-      <section className="section">
+      <section className="section has-background-info">
         <div className="container">
           <div className="columns">
             <div className="column is-half-desktop is-full-mobile">
-              <h4 className="title is-3 mgb-2">Filter</h4>
+              <h4 className="title is-3 mgb-2 has-text-white">Filter League</h4>
               <select className="input" onChange={handleFilter} name="filter" id="filter">
                 <option value="all">All</option>
                 {leagues.length && leagues.map((league) => {
@@ -66,9 +67,9 @@ const TeamsList = ({ leagues, teams }) => {
                 })}
               </select>
             </div>
-            <div className="column is-half-desktop is-full-mobile has-text-right-desktop has-text-left-desktop">
-              <h4 className="title is-3 mgb-2">Search</h4>
-              <input className="input" placeholder="arsenal" onChange={handleInput}></input>
+            <div className="column is-half-desktop is-full-mobile has-text-left-desktop has-text-left-desktop">
+              <h4 className="title is-3 mgb-2 has-text-white">Search Team Name</h4>
+              <input className="input" placeholder="Type team name here" onChange={handleInput}></input>
             </div>
           </div>
           
@@ -89,10 +90,7 @@ const TeamsList = ({ leagues, teams }) => {
             </>
             :
             <div className="has-text-centered"> 
-              <h2 className="title is-5 has-text-centered">
-                {hasError ? 'Something has gone wrong' : noneAvailable ? 'Check spelling' : 'Loading...'}
-              </h2>
-              
+              {hasError ? 'Something has gone wrong' : noneAvailable ? <h2 className="title is-5 has-text-centered">Check spelling</h2> : <img src={LoadingImage}/>}
             </div>
           }
         </div>

@@ -48,7 +48,6 @@ const TeamsPage = () => {
     getData()
   }, [])
 
-  console.log(teams.length)
   return (
     <>
       <section className="hero is-medium is-warning">

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 
 const TeamMain = ({ team }) => {
-  console.log(team)
+  
   const teamId = useParams()
   const [fixtures, setFixtures] = useState([])
   const [hasError, setHasError] = useState(false)
@@ -33,12 +33,6 @@ const TeamMain = ({ team }) => {
   },[fixtures])
 
 
-  // {team.strDescriptionEN.split('\r\n').length ? team.strDescriptionEN.split('\r\n').map(str => {
-  //   return str !== '' && <p key={str}>{str}<br/><br/></p>
-  // })
-  //   : team.strDescriptionEN}
-  
-  console.log(team)
   return (
     <>
       <section className="section main-section">
@@ -63,8 +57,17 @@ const TeamMain = ({ team }) => {
         }
         <section className="section main-section">
           <h2 className="title is-3">Description</h2>
-          <p>{team.strDescriptionEN}</p>
+          <p className="description">{team.strDescriptionEN}</p>
         </section>
+        {team.strTeamFanart1 &&
+        <section className="section main-section">
+          <h2 className="title is-3">Fan Art</h2>
+          <img className="fanart" src={team.strTeamFanart1} />
+          <img className="fanart" src={team.strTeamFanart2} />
+          <img className="fanart" src={team.strTeamFanart3} />
+          <img className="fanart" src={team.strTeamFanart4} />
+        </section>
+        }
       </>
       }
     </>

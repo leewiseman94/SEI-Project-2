@@ -28,6 +28,7 @@ const TeamDetails = () => {
 
   useEffect(() => {
     if (loading) {
+      window.scrollTo(0, 0)
       setLoading(false)
     } else {
       setDetailsReady(true)
@@ -35,9 +36,6 @@ const TeamDetails = () => {
     
   }, [team])
 
-
-  console.log(team)
-  console.log(hasError)
   return (
     <>
       <section className="hero is-medium is-warning">
@@ -54,12 +52,15 @@ const TeamDetails = () => {
                 <h5 className="title is-5 has-text-white has-text-left has-text-centered-mobile">
                   {detailsReady && team.strKeywords.split(',')[0]}
                 </h5>
+                <h5 className="title is-5 has-text-white has-text-left has-text-centered-mobile">
+                  {detailsReady && `Year Formed: ${team.intFormedYear}`}
+                </h5>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section animate__animated animate__bounceInLeft animate__slow">
         <div className="container">
           <div className="columns">
             <div className="column is-one-quarter-desktop is-full-mobile has-text-centered">
