@@ -71,7 +71,6 @@ const TeamDetails = () => {
             </div>
           </div>
         </div>
-
       </section>
     </>
   )

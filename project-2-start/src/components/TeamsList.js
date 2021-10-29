@@ -90,7 +90,7 @@ const TeamsList = ({ leagues, teams }) => {
             </>
             :
             <div className="has-text-centered"> 
-              {hasError ? 'Something has gone wrong' : noneAvailable ? <h2 className="title is-5 has-text-centered">Check spelling</h2> : <img src={LoadingImage}/>}
+              {hasError ? 'Something has gone wrong' : noneAvailable ? <h2 className="title is-5 has-text-centered">No teams match your search criteria</h2> : <img src={LoadingImage}/>}
             </div>
           }
         </div>
